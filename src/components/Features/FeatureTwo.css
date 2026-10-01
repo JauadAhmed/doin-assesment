@@ -1,0 +1,259 @@
+.f2-wrapper {
+  background: #FAFAFA;
+  padding: 80px 0 100px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Grid ── */
+.f2-grid {
+  display: grid;
+  grid-template-columns: 541px 1fr;
+  gap: 79px;
+  align-items: center;
+}
+
+/* ── Visual column ── */
+.f2-visual-col {
+  display: flex;
+  justify-content: flex-start;
+}
+/* 541×596 container matching Figma */
+.f2-visual {
+  position: relative;
+  width: 541px;
+  height: 596px;
+  flex-shrink: 0;
+}
+
+/* Lime blobs — top-right & mid-right */
+.f2-blob {
+  position: absolute;
+  object-fit: contain;
+  z-index: 4;
+  pointer-events: none;
+}
+.f2-blob-tr {
+  right: -15px;
+  top: 60px;
+  width: 130px;
+}
+.f2-blob-mr {
+  right: 80px;
+  top: 105px;
+  width: 100px;
+}
+
+/* Revenue badges (blue background) */
+.f2-badge {
+  position: absolute;
+  border-radius: 16px;
+  padding: 16px;
+  z-index: 5;
+}
+.f2-badge-revenue-total {
+  left: 0;
+  top: 44px;
+  background: #003BE2;
+  min-width: 216px;
+  backdrop-filter: blur(10px);
+}
+.f2-badge-ytd {
+  left: 0;
+  top: 194px;
+  background: #003BE2;
+  min-width: 134px;
+  backdrop-filter: blur(10px);
+}
+.f2-rev-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 8px;
+}
+.f2-rev-title {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 500;
+  color: #F5F5F6;
+  line-height: 1.2;
+}
+.f2-rev-sub {
+  font-family: var(--font-body);
+  font-size: 10px;
+  color: #F5F5F6;
+  opacity: 0.7;
+}
+.f2-rev-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.f2-rev-amount {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 600;
+  color: #F5F5F6;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+}
+.f2-ytd-amount {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 600;
+  color: #F5F5F6;
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+}
+.f2-rev-chip {
+  background: #D4FB20;
+  color: #242528;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 24px;
+  display: inline-block;
+}
+.f2-chip-sm { display: inline-block; margin-top: 4px; }
+.f2-sparkline {
+  width: 100%;
+  height: 8px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 24px;
+  margin-top: 8px;
+}
+
+/* Creator photo */
+.f2-creator-img {
+  position: absolute;
+  left: 28px;
+  top: 0;
+  width: 435px;
+  height: 596px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 8px;
+  z-index: 3;
+  box-shadow:
+    0.52px 0.74px 3.04px rgba(0,0,0,0.04),
+    2.23px 3.19px 5.72px rgba(0,0,0,0.06),
+    5.38px 7.69px 9.57px rgba(0,0,0,0.07),
+    10.21px 14.58px 16.09px rgba(0,0,0,0.08);
+}
+
+/* Happy Students badge */
+.f2-badge-students {
+  left: 283px;
+  bottom: 10px;
+  background: rgba(255,255,255,0.95);
+  min-width: 220px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+  backdrop-filter: blur(10px);
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.f2-stu-title {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: #242528;
+}
+.f2-stu-rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.f2-stu-score {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: #242528;
+  font-weight: 600;
+}
+.f2-stu-star { color: #D4FB20; font-size: 13px; }
+.f2-avatars { display: flex; align-items: center; }
+.f2-av {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  margin-left: -10px;
+}
+.f2-av:first-child { margin-left: 0; }
+.f2-av-more {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #D4FB20;
+  color: #242528;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  margin-left: -10px;
+}
+
+/* ── Text column ── */
+.f2-text-col {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.f2-heading {
+  font-family: var(--font-heading);
+  font-size: 44px;
+  font-weight: 600;
+  color: #242528;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+.f2-body {
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: #4B4C53;
+  line-height: 1.6;
+  margin-top: -16px;
+}
+.f2-body strong { font-weight: 700; color: #242528; }
+.f2-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.f2-check-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.f2-check-icon {
+  color: #003BE2;
+  fill: transparent;
+  flex-shrink: 0;
+}
+.f2-check-text {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 500;
+  color: #242528;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .f2-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .f2-visual { width: 100%; height: 480px; }
+  .f2-creator-img { width: 80%; height: 100%; left: 0; }
+  .f2-badge-students { left: auto; right: 0; }
+  .f2-blob { display: none; }
+}
+@media (max-width: 900px) {
+  .f2-grid { grid-template-columns: 1fr; }
+  .f2-heading { font-size: 34px; }
+  .f2-visual { height: 380px; }
+}
