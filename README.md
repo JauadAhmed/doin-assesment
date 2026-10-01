@@ -4,7 +4,7 @@
 
 ## 🚀 Live Demo
 
-**View Live on Vercel →** *[https://doin-tech-task.vercel.app](https://doin-tech-task.vercel.app)*
+**View Live on Vercel →** *[https://doin-assesment.vercel.app/](https://doin-assesment.vercel.app/)*
 
 ---
 
