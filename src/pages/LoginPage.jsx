@@ -41,7 +41,6 @@ export default function LoginPage({ onNavigate }) {
               alt="ByteSpace" 
               className="logo-mark"
             />
-            <span className="logo-text">ByteSpace</span>
           </a>
 
           {/* Headings */}
