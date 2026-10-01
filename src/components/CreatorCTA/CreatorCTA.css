@@ -1,0 +1,148 @@
+/* ── Section ── */
+.cta-section {
+  background: #ffffff;
+}
+
+/* ── Banner: full-width, 488px height, blue ── */
+.cta-banner {
+  position: relative;
+  width: 100%;
+  min-height: 488px;
+  background-color: #003BE2;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Grid overlay */
+.cta-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.09) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.12;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ── Ornament images ── */
+.cta-orb {
+  position: absolute;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* LEFT side ornaments */
+.cta-orb-lime-large {
+  width: 260px;
+  left: -80px;
+  bottom: -40px;
+}
+.cta-orb-white-sm {
+  width: 110px;
+  left: 178px;
+  top: 5px;
+}
+.cta-orb-cone-wbl {
+  width: 120px;
+  left: 10px;
+  bottom: 20px;
+}
+.cta-orb-cone-lbl {
+  width: 220px;
+  left: 100px;
+  bottom: -60px;
+}
+
+/* RIGHT side ornaments */
+.cta-orb-cone-str {
+  width: 130px;
+  right: 330px;
+  top: -10px;
+}
+.cta-orb-circle-wr {
+  width: 220px;
+  right: 80px;
+  bottom: -40px;
+}
+.cta-orb-cone-ltr {
+  width: 250px;
+  right: -30px;
+  top: -10px;
+}
+
+/* ── Content ── */
+.cta-content {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+  max-width: 964px;
+  padding: 80px 140px;
+}
+
+.cta-title {
+  font-family: var(--font-heading);
+  font-size: 44px;
+  font-weight: 600;
+  color: #F5F5F6;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-align: center;
+  max-width: 710px;
+}
+
+.cta-desc {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  color: #F5F5F6;
+  line-height: 1.6;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  background: #D4FB20;
+  border-radius: 24px;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 500;
+  color: #242528;
+  line-height: 1.2;
+  transition: background 0.18s ease, transform 0.18s ease;
+  white-space: nowrap;
+}
+.cta-btn:hover {
+  background: #c8f200;
+  transform: translateY(-2px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .cta-content { padding: 80px 60px; }
+  .cta-title { font-size: 36px; }
+  .cta-orb-lime-large { width: 200px; }
+  .cta-orb-cone-ltr { width: 180px; }
+  .cta-orb-circle-wr { width: 160px; }
+}
+@media (max-width: 768px) {
+  .cta-banner { min-height: 400px; }
+  .cta-content { padding: 60px 24px; gap: 28px; }
+  .cta-title { font-size: 28px; }
+  .cta-desc { font-size: 16px; }
+  .cta-orb { display: none; }
+}

@@ -1,0 +1,103 @@
+.courses-section {
+  padding: 100px 0 80px;
+  background-color: #ffffff;
+}
+.section-header-centered {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 40px;
+}
+.section-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--neutral-950);
+  line-height: 1.2;
+  margin-bottom: 16px;
+  letter-spacing: -0.8px;
+}
+.section-desc {
+  font-size: 16px;
+  color: var(--neutral-600);
+  line-height: 1.6;
+}
+.category-pills-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 980px;
+  margin: 0 auto 48px;
+}
+.category-pill {
+  padding: 8px 18px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: var(--neutral-50);
+  color: var(--neutral-700);
+  border: 1px solid var(--neutral-100);
+  transition: all 0.2s ease;
+}
+.category-pill:hover {
+  background-color: var(--neutral-100);
+  color: var(--neutral-950);
+}
+.category-pill.active {
+  background-color: var(--secondary-500);
+  color: var(--neutral-950);
+  font-weight: 700;
+  border-color: var(--secondary-500);
+  box-shadow: 0 4px 12px rgba(203, 252, 1, 0.4);
+}
+.search-filter-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--primary-50);
+  padding: 12px 20px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  color: var(--primary-900);
+  font-size: 14px;
+}
+.clear-search-btn {
+  font-weight: 600;
+  color: var(--primary-700);
+  text-decoration: underline;
+}
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.no-courses-found {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--neutral-50);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+@media (max-width: 1024px) {
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .section-title {
+    font-size: 34px;
+  }
+}
+@media (max-width: 640px) {
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+  .category-pills-wrapper {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 10px;
+  }
+}

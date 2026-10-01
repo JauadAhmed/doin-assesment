@@ -1,0 +1,226 @@
+/* ====================================
+   Shared Auth Page Styles
+   Used by LoginPage and RegisterPage
+   ==================================== */
+
+.auth-page-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+}
+.auth-container {
+  width: 100%;
+  max-width: 1240px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+.auth-left-col {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+.auth-brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  text-decoration: none;
+}
+.auth-brand-logo .logo-mark {
+  height: 34px;
+  width: auto;
+}
+.auth-brand-logo .logo-text {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 26px;
+  color: #ffffff;
+}
+.auth-hero-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 14px;
+  letter-spacing: -0.8px;
+}
+.auth-hero-desc {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  max-width: 460px;
+  margin-bottom: 40px;
+}
+.auth-visual-collage {
+  width: 100%;
+  max-width: 480px;
+}
+.auth-collage-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.25));
+}
+
+/* Right Card */
+.auth-right-col {
+  display: flex;
+  justify-content: center;
+}
+.auth-card {
+  background: #ffffff;
+  border-radius: 36px;
+  padding: 50px 44px;
+  width: 100%;
+  max-width: 460px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+}
+.auth-card-tag {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-600);
+  margin-bottom: 8px;
+}
+.auth-card-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--neutral-950);
+  line-height: 1.2;
+  margin-bottom: 32px;
+  letter-spacing: -0.5px;
+}
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.form-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--neutral-800);
+}
+.form-input {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--neutral-200);
+  background: #ffffff;
+  font-size: 15px;
+  color: var(--neutral-950);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.form-input:focus {
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 3px rgba(4, 69, 255, 0.1);
+}
+.form-input::placeholder {
+  color: var(--neutral-400);
+}
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.toggle-password-btn {
+  position: absolute;
+  right: 14px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+}
+.auth-btn-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+.auth-submit-btn {
+  padding: 12px 32px;
+  font-size: 15px;
+}
+.auth-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 16px 0;
+  color: var(--neutral-400);
+  font-size: 14px;
+}
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--neutral-200);
+}
+.auth-divider span {
+  padding: 0 14px;
+}
+.social-auth-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.social-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid var(--neutral-200);
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--neutral-950);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.social-btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--neutral-400);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+.auth-footer-prompt {
+  text-align: center;
+  font-size: 14px;
+  color: var(--neutral-600);
+}
+.auth-link {
+  color: var(--primary-600);
+  font-weight: 600;
+  margin-left: 4px;
+}
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .auth-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .auth-left-col {
+    align-items: center;
+    text-align: center;
+  }
+  .auth-visual-collage {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 36px 24px;
+    border-radius: 24px;
+  }
+  .auth-card-title {
+    font-size: 28px;
+  }
+}
